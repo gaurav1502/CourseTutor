@@ -33,7 +33,7 @@ RSpec.describe "Api::V1::Courses", type: :request do
       response_body = JSON.parse(response.body)
       expect(response.code).to eq('200')
       expect(response_body.count).to eq(1)
-      expect(response_body.dig("data")[0]['tutors'].count).to eq(2)
+      expect(response_body[0]['tutors'].count).to eq(2)
     end
   end
 
