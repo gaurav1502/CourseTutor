@@ -1,0 +1,172 @@
+Started GET "/" for ::1 at 2023-07-14 12:08:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 583)
+Completed 200 OK in 60ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 6378)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-14 12:09:09 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 278)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1000)
+
+
+Started GET "/" for ::1 at 2023-07-14 12:09:17 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 12:09:27 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 50ms (Views: 1.4ms | ActiveRecord: 6.5ms | Allocations: 18615)
+
+
+Started GET "/" for ::1 at 2023-07-14 16:27:04 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silicon/.rvm/gems/ruby-3.1.2/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 275)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:06 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:4:in `map'
+[active_model_serializers]   [1m[36mTutor Load (0.5ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/courses_controller.rb:12:in `index'
+[active_model_serializers]   [1m[36mCACHE Tutor Load (0.0ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/courses_controller.rb:12:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.79ms)
+Completed 200 OK in 27ms (Views: 3.7ms | ActiveRecord: 4.4ms | Allocations: 11306)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-07-14 16:27:07 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:18 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 37ms (Views: 1.1ms | ActiveRecord: 10.0ms | Allocations: 8044)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:23 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:4:in `map'
+[active_model_serializers]   [1m[36mTutor Load (0.2ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/courses_controller.rb:12:in `index'
+[active_model_serializers]   [1m[36mCACHE Tutor Load (0.0ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/courses_controller.rb:12:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.18ms)
+Completed 200 OK in 16ms (Views: 2.4ms | ActiveRecord: 3.9ms | Allocations: 7565)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:44 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:4:in `map'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 19ms (Views: 1.1ms | ActiveRecord: 5.0ms | Allocations: 5617)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:48 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.5ms | Allocations: 9494)
+
+
+  
+NoMethodError (undefined method `tutor' for #<Course id: nil, name: "JAVA", code: "CSE111">
+Did you mean?  tutors
+               tutors=):
+  
+app/controllers/api/v1/courses_controller.rb:8:in `block in index'
+app/controllers/api/v1/courses_controller.rb:4:in `map'
+app/controllers/api/v1/courses_controller.rb:4:in `index'
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:27:58 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+  [1m[36mTutor Load (0.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 5.0ms | Allocations: 8047)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:33:37 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:11:in `map'
+  [1m[36mCACHE Tutor Load (0.0ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:11:in `map'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 4.1ms | Allocations: 6961)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:34:12 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses"."name", "courses"."code" FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:13:in `map'
+  [1m[36mCACHE Tutor Load (0.0ms)[0m  [1m[34mSELECT "tutors"."name", "tutors"."contact_number" FROM "tutors" WHERE "tutors"."course_id" IS NULL[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:13:in `map'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 35315ms (Views: 0.6ms | ActiveRecord: 3.8ms | Allocations: 129679)
+
+
+  [1m[36mTutor Count (17.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "tutors"[0m
+  [1m[36mTutor Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tutors"[0m
+  [1m[36mTutor Load (0.8ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors"[0m
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:37:08 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+  [1m[36mTutor Load (0.2ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 4.5ms | Allocations: 7950)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:37:10 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:6:in `map'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1849)
+
+
+Started GET "/api/v1/courses" for ::1 at 2023-07-14 16:39:42 +0530
+Processing by Api::V1::CoursesController#index as HTML
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:7:in `index'
+  [1m[36mTutor Load (0.6ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."course_id" IN ($1, $2)[0m  [["course_id", 1], ["course_id", 2]]
+  ↳ app/controllers/api/v1/courses_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.35ms)
+Completed 200 OK in 176926ms (Views: 1.9ms | ActiveRecord: 17.1ms | Allocations: 41584)
+
+
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.3ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTutor Load (0.4ms)[0m  [1m[34mSELECT "tutors".* FROM "tutors" WHERE "tutors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]

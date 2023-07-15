@@ -1,10 +1,15 @@
 class Api::V1::CoursesController < ApplicationController
   # if params not present then we also handled this error in application ActionController::ParameterMissing
   def index
-     # we can also use pagination here
-    course_data = Course.includes(:tutors).as_json(
-      only: %i[name code], include: { tutors: { only: %i[name contact_number] } }
-    )
+    # we can also use pagination here
+    courses = Course.includes(:tutors)
+    course_data = courses.map do |course|
+      {
+        name: course.name,
+        code: course.code,
+        tutors: course.tutors.map { |tutor| { name: tutor.name, contact_number: tutor.contact_number } }
+      }
+    end
     render json: { data: course_data }
   end
 
