@@ -11,6 +11,7 @@ Things you may want to cover:
 
 * System dependencies
 * Configuration
+* 
     Run bundle install
     rails new course-final --api -d postgresql -- which create ruby api project
     Create serializer -rails generate serializer Tutor
