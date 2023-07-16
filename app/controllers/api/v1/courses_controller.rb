@@ -4,6 +4,7 @@ class Api::V1::CoursesController < ApplicationController
   def index
     # we can also use pagination here
     courses = Course.includes(:tutors)
+    # two ways to render the responses for api  as_json() and serializer
     # Call serializer for required attributes only
     render json: courses, each_serializer: CourseSerializer
   end
