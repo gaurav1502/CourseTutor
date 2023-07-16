@@ -15,6 +15,8 @@ Things you may want to cover:
     rails new course-final --api -d postgresql -- which create ruby api project
     Create serializer -rails generate serializer Tutor
     For creating the course and tutor Please use below API link https://red-space-112403.postman.co/workspace/My-Workspace~8635891e-f8b9-434f-8b9b-593373b3bc7c/request/16950636-55e2a382-ccfc-4f5c-acdd-612430d3335b?ctx=documentation
+
+  
   *
     {
       "course":
