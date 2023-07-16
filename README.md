@@ -9,31 +9,31 @@ Things you may want to cover:
 
 * Rails version - 7.0.6
 
-System dependencies
+* System dependencies
 * Configuration
-  Run bundle install
-  rails new course-final --api -d postgresql -- which create ruby api project
-  Create serializer -rails generate serializer Tutor
-  For creating the course and tutor Please use below API link https://red-space-112403.postman.co/workspace/My-Workspace~8635891e-f8b9-434f-8b9b-593373b3bc7c/request/16950636-55e2a382-ccfc-4f5c-acdd-612430d3335b?ctx=documentation
-*
-  {
-    "course":
-      { 
-        "name": "JAVA",
-        "code": "CSE11",
-        "tutors_attributes":
-        [
-          { "name": "test tutor", "contact_number": "7654321461" },
-          { "name": "test tutor 2", "contact_number": "3276542345"}
-        ] 
-      }
-  }
+    Run bundle install
+    rails new course-final --api -d postgresql -- which create ruby api project
+    Create serializer -rails generate serializer Tutor
+    For creating the course and tutor Please use below API link https://red-space-112403.postman.co/workspace/My-Workspace~8635891e-f8b9-434f-8b9b-593373b3bc7c/request/16950636-55e2a382-ccfc-4f5c-acdd-612430d3335b?ctx=documentation
+  *
+    {
+      "course":
+        { 
+          "name": "JAVA",
+          "code": "CSE11",
+          "tutors_attributes":
+          [
+            { "name": "test tutor", "contact_number": "7654321461" },
+            { "name": "test tutor 2", "contact_number": "3276542345"}
+          ] 
+        }
+    }
 
 * Responses
 
-  { "status": true, "message": "Course created successfully." }
-  
-  { "status": false, "message": "Tutors contact number has already been taken, Code has already been taken" }
+    { "status": true, "message": "Course created successfully." }
+    
+    { "status": false, "message": "Tutors contact number has already been taken, Code has already been taken" }
 
 * Database
   * Postgres
